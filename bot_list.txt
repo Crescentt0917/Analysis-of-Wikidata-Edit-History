@@ -1,0 +1,603 @@
+1-Byte-Bot
+12imom
+1VeertjeBot
+62mkvLexemeBot
+A-lú-mih-bot
+Addbot
+ADSEnglishBot
+AeroidBot
+AinaliBot
+AitalDisem
+AitalvivemBot
+Ajrbot
+AkBot
+AkkakkBot
+AkoopalBot
+Alch Bot
+Alecs.bot
+AlepfuBot
+AlessioBot
+Alexabot
+AliciaFagervingWMSE-bot
+Allanbot
+Alleycatbot
+AlphamaBot
+AmmarBot
+Andrebot
+AndreCostaWMSE-bot
+AndreeBot
+Aosbot
+Aplikasi-Bot
+APSbot
+Arasaacbot
+Arch2bot
+Armaanaziz
+Asahibot
+ASammourBot
+AudeBot
+AvicBot
+AVMbot
+AvocatoBot
+AVSBot
+AxelBot
+AyackBot
+B0ttle
+BacDiveBot
+BacterialAnnotationBot
+BalajijagadeshBot
+BaluBot
+BandiBot
+BandMemberBot
+Bekicot
+BernsteinBot
+BetaBot
+BgeeDB-bot
+BGPopBot
+Bigbossrobot
+BinBot
+BiodiversityBot
+BMacZeroBot
+BonifazWolbot
+BorkedBot
+BotAdventures
+Botcrux
+Boteshassar
+BotLuffyTech
+BotMultichill
+BotMultichillT
+BotNinja
+BotOrienteerix
+BoulaurBot
+Bovlbbot
+BrackiBot
+BraunBot
+BraveBot
+BubblySnowBot
+BulletBot
+BusinessIntelligencebot
+Byrialbot
+CalakBot
+CaliburnBOT
+CanaryBot
+Catabot
+CC0-JS
+CellosaurusBot
+CennoBot
+CensusBot
+Cewbot
+Checkallthestrings bot
+Chembot
+ChineseWikiClub22bot
+ChineseWikiClubBot
+Chobot
+Choboty
+Citationgraph bot
+Citationgraph bot 2
+Citing Bot
+CJMbot
+Cliverbot
+Cmtqbot
+CoBot
+Cogent-nimbus-205412
+CommonsDelinquent
+ComplexPortalBot
+Covid19SwissDataBot
+CQBot
+Crossref bot
+Crystal-bot
+Csvtodata
+CultureBot
+Cyberbot I
+CyclingInitBot
+Cydebot
+D2-bot
+Dafna3.bot
+DangSunBot
+DangSunBot2
+DanmicholoBot
+Danroks bot
+DarafshBot
+DarijaBot
+DbBot
+DBDataPublisherBot
+DBpedia-mapper-bot
+Dcirovicbot
+Declaratorbot
+DeepsagedBot
+DeltaBot
+Descriptioncreator
+Deskanabot
+DevbugBot
+Dexbot
+DidymBot
+DimaBot
+DimonBot
+Dipsacus fullonum bot
+DixonDBot
+Docu with script
+Donna Nobot
+DoubanBot
+DPLA bot
+Dr Plane
+DrTrigonBot
+DSisyphBot
+DuraEuroposBot
+DutchElectionsBot
+DynBot Srv2
+DæghrefnBot
+Dɐ-Bot
+EdgarsBot
+EdinBot
+EduardoGKBot
+Eflybot
+Elhuyar Fundazioa bot
+EloBot
+ElphiBot
+EmausBot
+Emijrpbot
+EmptyBot
+EncyclopedistBot
+EnvlhBot
+EpiskoBot
+Escabot
+Escarbot
+EstonianHeritageBot
+ETISBot
+EuropeanCommissionBot
+EV100 bot
+EverbaseBot
+Fab1canBot
+Fabris Los
+Faebot
+Fako85bot
+Fatameh sister bot
+Fatemibot
+FerdiBot
+Fergaral96bot
+FischBot-test
+Fiwiki-tools-bot
+FloBot
+FLOSSbot
+Fluxbot
+Framabot
+FrigidBot
+FutoohBot
+Gabrielchihonglee-Bot
+GanimalBot
+GeertivpBot
+GeneaBot
+Gerakibot
+Github-wiki-bot
+Global Economic Map Bot
+Goo1Bot
+GPUBot
+Grawibot
+GupyBot
+Gzen92Bot
+Haansn08-Bot
+HannolansBot
+HaroldBot
+Hawk-Eye-Bot
+HaxpettBot
+Hazard-Bot
+HciBot
+Histobot
+Hkn-bot
+Hopala!Bot
+HujiBot
+Hurricanefan25 in the storm
+HuskyBot
+Huzzlet the bot
+HypoBOT
+IA.Bot.IvohQuay
+IA.Bot.MalaCards
+IDbot
+IEPCBM Bot
+InductiveBot
+InfoRobBot
+IngeniousBot
+Innocent bot
+InwBot
+IssnBot
+ItalianSchoolsBot
+Iñaki LLbot
+JackieBot
+JarBot
+JarektBot
+Jefft0Bot
+JhealdBatch
+JhealdBot
+JhsBot
+JneubertAutomated
+Jntent's Bot
+JohlBot
+Johnflow
+JonHaraldSøbyWMNO-bot
+JoRobot
+Josh404Bot
+JudgeBot
+JVbot
+JWbot
+JYBot
+K10PlusBot
+KabouterBot
+KaldariBot
+KaleemBot
+KamikazeBot
+KanzatBot
+KarlWettinWMSE-bot
+Kartṛ-bot
+KasparBot
+Keplerbot
+KlaudiuBot
+KLBot2
+KnuthuehneBot
+KoehlBot
+Kompakt-bot
+Koslambroubot
+KrattBot1
+KrBot
+KrBot2
+Kriobot
+KunMilanoRobot
+L PBot
+Lanbot
+LandesfilmsammlungBot
+Lansbot
+LargeDatasetBot
+LauBot
+LimaMarioBot
+LinedBot
+Lingua Libre Bot
+LinkedPipes ETL Bot
+LinkedPipes ETL Bot MN
+Lisp.hippie.bot
+ListedBuildingsUKBot
+ListeriaBot
+LkastlerBot
+LocatorBot
+Lockalbot
+LogainmBot
+Louperibot
+M.casanova.bot
+MahdiBot
+MajedBot
+Makecat-bot
+Makrobot
+MalarzBOT
+Mangler-bot
+Manuvinabot
+Maria research bot
+MastiBot
+MatmaBot
+MatSuBot
+MBAreaBot
+Mbchbot
+MechQuesterBot
+MedalBot
+MenoBot
+MergeBot
+MerlBot
+MerlIwBot
+METbot
+MewBot
+MexBot
+MicrobeBot
+MidleadingBot
+Miguillen-bot
+Mikey641Bot
+MilanBot
+MineoBot
+Mjbmrbot
+Mk-II
+Mpece-bot
+Mr Robot
+Mr.Ibrahembot
+Mro-bot
+MsynABot
+MsynBot
+MuBot
+MuISBot
+Mush bot
+MusiBot
+MystBot
+Neonionbot
+NicereddyBot
+NiconoeBot
+NikkiBot
+NirmosBot
+Njzjzbot
+NMBot
+NoclaimsBot
+NPImporterBot
+NukatCatalogBot
+OctraBot
+OgreBot
+OlafJanssenBot
+Omar2040Bot
+Openaccess cma
+OpenAlexBot
+OpenLibraryBot
+Or1Bot
+Orgabot
+OrlodrimBot
+OrophinBot
+PamputtBot
+PastoriBot
+Pathwaybot
+PBbot
+PBot
+PedropaulovcBot
+Persian Wikis Janitor Bot
+Peter17-Bot
+Peuc bot
+Phenobot
+Photocyte bot
+Ping08Bot
+Pinky and The Brain Bot
+PintochBot
+PLbot
+PoliceOfWikitown
+Polish Monuments
+Politican scraper comparison bot
+PoliticianBot
+Popcornbot
+Position holder bot
+Position holder history bot
+PositionStatements Bot
+PoulpyBot
+PreferentialBot
+ProgvalInfoboxBot
+Prompter Bot
+ProteinBoxBot
+PyPIDataBot
+Q23679
+QuebecLiteratureBot
+QZandenBot
+R2-D2 Bot
+RarBot
+RaymondYeeBot
+Rebot
+Recipe Bot
+ReimannBot
+RenmBot
+ReosarevokBot
+Repology bot
+Research Bot
+Revibot
+Revibot I
+Rezabot
+RfcBot
+RileyBot
+Robin Bot
+RobokoBot
+RobotMichiel1972
+RobotRobin
+RoboViolet
+Rodrigo Padula (BOT)
+RollBot
+RottenBot
+Ruud Koot (bot)
+SaamDataImportBot
+Sailbot
+SalviBot
+Sanjeev bot
+Sarojbot
+Sartle.wiki.bot
+SaschaBot
+SBBUpdaterBot
+SbisoloBot
+Scidudebot
+Scorumbot
+ScorumMEBot
+SDrewthbot
+SergoBot
+ShBot
+ShinobiBot
+ShonagonBot
+Shuaib-bot
+SilentSpikeBot
+SIOAbot
+SixTwoEightBot
+SKbot
+SlingDateBot
+SlingWikiBot
+SLiuBot
+SmartifyBot
+Snow22Bot
+So9qBot
+SoCalChemBot
+Soh.Miero.Bot
+Souedbot
+Soweego bot
+SpBot
+SPQRobot
+SSZ-bot
+StackerBot
+Stangbot
+Steenthbot
+SteinsplitterBot
+StigBot
+Strainubot
+StreetmathematicianBot
+Strobbot
+Structor
+StrynBot
+SuccuBot
+SvebertBot
+Svenbot
+SweetBot
+Symac bot
+Tabot
+Taigiholic.bot
+TAMISBot
+TaxonBot
+TemirovBot
+TextworkerBot
+The Anomebot 3
+The1Yoshi
+Thebot
+TheFireBenderBot
+Theo's Little Bot
+ThetaBot
+ThieolBot
+TidoniBot
+Tmdbzhbot
+TohaomgBot
+TokokoBot
+Tokrkbot
+TOP500 importer
+TptBot
+TuforBOT
+Twofivesixbot
+TwPoliticiansBot
+UallvBot
+Ugbot
+UnderlyingBot
+UrbanecmBot
+UreomicsBot
+UreomiczBot
+US National Archives bot
+UVbot
+Uzielbot
+Vadbot
+Valerio Bozzolan bot
+ValterVBot
+Verification pages bot
+VesihiisiBot
+VIAFbot
+ViscoBot
+VlsergeyBot
+VojtěchDostálBot
+VollBot
+VorontsovIEbot
+VortBot
+VsBot
+Wakebrdkid's bot
+Wasabot
+WDBot
+WdppBot
+WeChangEd
+WestPapua1995Indonesia
+WhidouBot
+Whymbot
+Widar of zolo
+WikiDataScapeBot
+WikiGrok
+WikiTrackBot
+William Avery Bot
+Wolfgang8741 bot
+WylveWidar
+XabatuBot
+Xaris333Bot
+Xqbot
+XXN-bot
+YuatchaBot
+Yuibot
+YurikBot
+ZabesBot
+ZaBOTka
+ZacheBot
+ZbwAddAuthorityBot
+ZedlikBot
+Zielmicha Bot
+ZiyadBot
+ZkBot
+ÖdokBot
+ԱշբոտՏՆՂ
+আফতাব বট
+নকীব বট
+레비
+AGbot
+AHbot
+AmeisenBot
+AmpersandBot
+Antoine2711bot
+Ash Bot
+Auto Prod Bot
+AutomaticWelcomerBot
+AzBot
+BaseBot
+BeneBot*
+Bitbotje
+Botik
+BukovníkBot
+Butlerbot
+Cheers!-bot
+CodexBot
+ConBot
+CountyBot
+Dom bot
+EbeBot
+Edoderoobot
+FischBot
+Frettiebot
+Glavkos bot
+GnoeeeBot
+GomBot
+GrammarwareBot
+GretaHeng18bot
+GZWDer (flood)
+Hoo Bot
+InkoBot
+InteGraalityBot
+JAnDbot
+JanitorBot
+KBNLbot
+KrattBot
+Krdbot
+KRLS Bot
+Legobot
+Liangent-bot
+LinkRecoveryBot
+MABot
+MagulBot
+MarmaseBot
+MDanielsBot
+Melouresbot
+Nullzerobot
+PagesBot
+PavloChemBot
+PingWDbot
+PokestarFanBot
+QuickStatementsBot
+Ra-bot-nik
+RegularBot
+RobotGMwikt
+SamoaBot
+SanniBot
+Shyde
+Sk!dbot
+Smbbot
+TambonBot
+UghBot
+UsernameReviewerBot
+VanderBot
+WikiLovesESBot
+WikiTennisBot
+WYImporterBot
+YasBot
+YBot
+YSObot
+ZiziBot
+Zroszbot
