@@ -1,0 +1,89 @@
+# Some similar analyses are not listed here 
+# because of the very high degree of code repetition.
+
+# ====================create tables in Amazon Athena==================================
+
+CREATE EXTERNAL TABLE `property`(
+  `entity_id` string, 
+  `edit_id` int, 
+  `edit_time` timestamp, 
+  `editor_name` string, 
+  `edit_type` string, 
+  `type` string, 
+  `info` string, 
+  `content` string)
+ROW FORMAT DELIMITED 
+  FIELDS TERMINATED BY '\t' 
+STORED AS INPUTFORMAT 
+  'org.apache.hadoop.mapred.TextInputFormat' 
+OUTPUTFORMAT 
+  'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
+LOCATION
+  's3://wikiedittest/property'
+
+CREATE EXTERNAL TABLE `property_data_type`(
+  `entity_id` string, 
+  `data_type` string)
+ROW FORMAT DELIMITED 
+  FIELDS TERMINATED BY '\t' 
+STORED AS INPUTFORMAT 
+  'org.apache.hadoop.mapred.TextInputFormat' 
+OUTPUTFORMAT 
+  'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
+LOCATION
+  's3://wikiedittest/property_datatype'
+
+
+# ====================Analysis in Amazon Athena==================================
+
+# number of properties edited, edits, and editors
+SELECT COUNT(*), COUNT(DISTINCT editor_name), 
+  COUNT(DISTINCT entity_id)
+FROM property;
+
+# number of edits in each type
+SELECT type, COUNT(*) 
+FROM property 
+GROUP BY type
+ORDER BY COUNT(*) DESC;
+
+# number of edits and properties edited each month
+SELECT YEAR(edit_time) AS edit_year, MONTH(edit_time) AS edit_month, 
+  COUNT(edit_id) AS number_of_edits, 
+  COUNT(DISTINCT entity_id) AS number_of_properties
+FROM property
+GROUP BY YEAR(edit_time), MONTH(edit_time)
+ORDER BY YEAR(edit_time), MONTH(edit_time);
+
+# number of times each property has been edited
+SELECT entity_id, COUNT(*) 
+FROM property
+GROUP BY entity_id
+ORDER BY COUNT(*) DESC;
+
+# time between consecutive edits of the same property
+SELECT next_time-edit_time AS timediff
+FROM (
+    SELECT *, LEAD(edit_time, 1)
+    OVER(PARTITION BY entity_id, ORDER BY edit_id)
+    AS next_time
+    FROM "property" 
+) t;
+
+# the data type of this property being edited
+SELECT data_type, COUNT(*) 
+FROM property INNER JOIN property_data_type 
+ON property.entity_id = property_data_type.entity_id
+GROUP BY data_type
+ORDER BY COUNT(*) DESC;
+
+# all the edits that were reverted
+SELECT A.*, B.*
+FROM property A INNER JOIN property B
+ON CAST(A.edit_id AS VARCHAR) = B.info;
+
+# time between creation and reverts
+SELECT B.edit_time - A.edit_time
+FROM property A INNER JOIN property B
+ON CAST(A.edit_id AS VARCHAR) = B.info;
+
