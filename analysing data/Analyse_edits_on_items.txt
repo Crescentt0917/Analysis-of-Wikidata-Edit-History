@@ -1,0 +1,245 @@
+# Some similar analyses are not listed here 
+# because of the very high degree of code repetition.
+
+# ====================create tables in Amazon Athena==================================
+CREATE EXTERNAL TABLE `create`(
+  `entity_id` string, 
+  `edit_id` int, 
+  `prev_edit_id` int, 
+  `edit_time` timestamp, 
+  `editor_name` string, 
+  `edit_type` string, 
+  `language` string, 
+  `content` string)
+ROW FORMAT DELIMITED 
+  FIELDS TERMINATED BY '\t' 
+STORED AS INPUTFORMAT 
+  'org.apache.hadoop.mapred.TextInputFormat' 
+OUTPUTFORMAT 
+  'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
+LOCATION
+  's3://wikiedittest/create_merge/create'
+  
+CREATE EXTERNAL TABLE `merge`(
+  `entity_id` string, 
+  `edit_id` int, 
+  `prev_edit_id` int, 
+  `edit_time` timestamp, 
+  `editor_name` string, 
+  `edit_type` string, 
+  `target_item` string, 
+  `content` string)
+ROW FORMAT DELIMITED 
+  FIELDS TERMINATED BY '\t' 
+STORED AS INPUTFORMAT 
+  'org.apache.hadoop.mapred.TextInputFormat' 
+OUTPUTFORMAT 
+  'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
+LOCATION
+  's3://wikiedittest/create_merge/merge/merge_exchange'
+  
+CREATE EXTERNAL TABLE `override`(
+  `entity_id` string, 
+  `edit_id` int, 
+  `prev_edit_id` int, 
+  `edit_time` timestamp, 
+  `editor_name` string, 
+  `edit_type` string, 
+  `content` string)
+ROW FORMAT DELIMITED 
+  FIELDS TERMINATED BY '\t' 
+STORED AS INPUTFORMAT 
+  'org.apache.hadoop.mapred.TextInputFormat' 
+OUTPUTFORMAT 
+  'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
+LOCATION
+  's3://wikiedittest/override'
+  
+CREATE EXTERNAL TABLE `protect`(
+  `entity_id` string, 
+  `edit_id` int, 
+  `prev_edit_id` int, 
+  `edit_time` timestamp, 
+  `editor_name` string, 
+  `edit_type` string, 
+  `content` string)
+ROW FORMAT DELIMITED 
+  FIELDS TERMINATED BY '\t' 
+STORED AS INPUTFORMAT 
+  'org.apache.hadoop.mapred.TextInputFormat' 
+OUTPUTFORMAT 
+  'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
+LOCATION
+  's3://wikiedittest/protect'
+  
+CREATE EXTERNAL TABLE `label`(
+  `entity_id` string, 
+  `edit_id` int, 
+  `prev_edit_id` int, 
+  `edit_time` timestamp, 
+  `editor_name` string, 
+  `edit_type` string, 
+  `language` string, 
+  `content` string)
+ROW FORMAT DELIMITED 
+  FIELDS TERMINATED BY '\t' 
+STORED AS INPUTFORMAT 
+  'org.apache.hadoop.mapred.TextInputFormat' 
+OUTPUTFORMAT 
+  'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
+LOCATION
+  's3://wikiedittest/terms/label_description_alias/label'
+  
+CREATE EXTERNAL TABLE `claim`(
+  `entity_id` string, 
+  `edit_id` int, 
+  `prev_edit_id` int, 
+  `edit_time` timestamp, 
+  `editor_name` string, 
+  `edit_type` string, 
+  `p_id` string, 
+  `content` string)
+ROW FORMAT DELIMITED 
+  FIELDS TERMINATED BY '\t' 
+STORED AS INPUTFORMAT 
+  'org.apache.hadoop.mapred.TextInputFormat' 
+OUTPUTFORMAT 
+  'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
+LOCATION
+  's3://wikiedittest/statement/claim'
+  
+CREATE EXTERNAL TABLE `sitelink`(
+  `entity_id` string, 
+  `edit_id` int, 
+  `prev_edit_id` int, 
+  `edit_time` timestamp, 
+  `editor_name` string, 
+  `edit_type` string, 
+  `site` string, 
+  `content` string)
+ROW FORMAT DELIMITED 
+  FIELDS TERMINATED BY '\t' 
+STORED AS INPUTFORMAT 
+  'org.apache.hadoop.mapred.TextInputFormat' 
+OUTPUTFORMAT 
+  'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
+LOCATION
+  's3://wikiedittest/sitelink'
+
+CREATE EXTERNAL TABLE `revert`(
+  `entity_id` string, 
+  `edit_id` int, 
+  `prev_edit_id` int, 
+  `edit_time` timestamp, 
+  `editor_name` string, 
+  `edit_type` string, 
+  `target_edit_id` int, 
+  `content` string)
+ROW FORMAT DELIMITED 
+  FIELDS TERMINATED BY '\t' 
+STORED AS INPUTFORMAT 
+  'org.apache.hadoop.mapred.TextInputFormat' 
+OUTPUTFORMAT 
+  'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
+LOCATION
+  's3://wikiedittest/revert'
+  
+CREATE EXTERNAL TABLE `whole_log`(
+  `entity_id` string, 
+  `edit_id` int, 
+  `edit_time` timestamp, 
+  `edit_type` string)
+ROW FORMAT DELIMITED 
+  FIELDS TERMINATED BY '\t' 
+STORED AS INPUTFORMAT 
+  'org.apache.hadoop.mapred.TextInputFormat' 
+OUTPUTFORMAT 
+  'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
+LOCATION
+  's3://wikiedittest/whole'
+  
+  
+# ====================Analysis in Amazon Athena==================================
+
+# number of items edited, edits, and editors
+SELECT COUNT(*), COUNT(DISTINCT editor_name), 
+  COUNT(DISTINCT entity_id)
+FROM whole_log;
+
+# number of edits in each type
+SELECT edit_type, COUNT(*) 
+FROM whole_log 
+GROUP BY edit_type
+ORDER BY COUNT(*) DESC;
+
+# number of edits and items edited each month
+SELECT YEAR(edit_time) AS edit_year, MONTH(edit_time) AS edit_month, 
+  COUNT(edit_id) AS number_of_edits, 
+  COUNT(DISTINCT entity_id) AS number_of_items
+FROM whole_log
+GROUP BY YEAR(edit_time), MONTH(edit_time)
+ORDER BY YEAR(edit_time), MONTH(edit_time);
+
+# number of times each item has been edited
+SELECT entity_id, COUNT(*) 
+FROM whole_log
+GROUP BY entity_id
+ORDER BY COUNT(*) DESC;
+
+# time between consecutive edits of the same item
+SELECT next_time-edit_time AS timediff
+FROM (
+    SELECT *, LEAD(edit_time, 1)
+    OVER(PARTITION BY entity_id, ORDER BY edit_id)
+    AS next_time
+    FROM "whole_log" 
+) t;
+
+# time between consecutive item creations
+SELECT next_time-edit_time AS timediff
+FROM (
+    SELECT *, LEAD(edit_time, 1)
+    OVER(ORDER BY edit_id)
+    AS next_time
+    FROM "create" 
+) t;
+
+# number of mergers, source items, and target items each month
+SELECT YEAR(edit_time) AS edit_year, MONTH(edit_time) AS edit_month, 
+  COUNT(edit_id) AS number_of_mergers, 
+  COUNT(DISTINCT entity_id) AS number_of_source_items,
+  COUNT(DISTINCT target_item) AS number_of_target_items,
+FROM merge
+GROUP BY YEAR(edit_time), MONTH(edit_time)
+ORDER BY YEAR(edit_time), MONTH(edit_time);
+
+# the reasons for overriding items
+SELECT edit_info, COUNT(*) FROM override
+GROUP BY edit_info
+ORDER BY COUNT(*) DESC;
+
+# time between creations and mergers of the same item
+SELECT M.edit_time-C.edit_time
+FROM merge M INNER JOIN create C
+ON M.entity_id = C.entity_id;
+
+# number of edits on labels (group by different languages and different actions)
+SELECT language, edit_type, COUNT(*) FROM label
+GROUP BY language, edit_type
+ORDER BY COUNT(*) DESC;
+
+# number of times each site has been involved (group by sites and actions);
+SELECT site, edit_type, COUNT(*) FROM sitelink
+GROUP BY site, edit_type
+ORDER BY COUNT(*) DESC;
+
+# all the edits that were reverted
+SELECT W.*, R.*
+FROM whole_log W INNER JOIN revert R
+ON CAST(W.edit_id AS VARCHAR) = R.target_edit_id;
+
+# time between creation and reverts
+SELECT W.edit_time - R.edit_time
+FROM whole_log W INNER JOIN revert R
+ON CAST(W.edit_id AS VARCHAR) = R.info;
+
