@@ -6,6 +6,7 @@ The folder "Processing metadata" contains:
   3. codes for edit type segmentation and extracting keywords
   4. codes for forming the final dataset to be analysed
 
+
 The folder "Analysing data" contains:
   1. SQL queries to analyse edit dataset for both items and properties
   Note. Some similar analyses are not listed here because of the very high degree of code repetition.
